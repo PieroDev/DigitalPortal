@@ -14,5 +14,11 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class App {
   protected readonly title = signal('DigitalPortal');
-  faCoffee = faCoffee;
+  phoneNumber: string = '+56977542297'; // Replace with your number (e.g., '14155552671')
+  
+  get whatsappLink(): string {
+    // Remove any non-digit characters
+    const cleanNumber = this.phoneNumber.replace(/\D/g, '');
+    return `https://wa.me/${cleanNumber}`;
+  }
 }
