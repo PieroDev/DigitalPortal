@@ -4,12 +4,13 @@ import { Start} from './start/start';
 import { Benefits } from './benefits/benefits';
 import { Services } from './services/services';
 import { Prices } from './prices/prices'
+import { Footer } from './footer/footer'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices],
+  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
