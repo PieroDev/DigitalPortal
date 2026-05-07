@@ -1,3 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@theme {
+  --animate-fade-in: fade-in 1s ease-in-out forwards;
+  --animate-fade-out: fade-out 1s ease-in-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
