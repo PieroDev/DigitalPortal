@@ -14,6 +14,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('DigitalPortal');
   phoneNumber: string = '+56977542297'; // Replace with your number (e.g., '14155552671')
