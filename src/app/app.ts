@@ -5,12 +5,13 @@ import { Benefits } from './benefits/benefits';
 import { Services } from './services/services';
 import { Prices } from './prices/prices'
 import { Footer } from './footer/footer'
+import { RoadMap } from './road-map/road-map';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices, Footer],
+  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices, Footer, RoadMap],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
