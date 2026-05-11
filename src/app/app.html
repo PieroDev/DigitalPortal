@@ -1,39 +1,43 @@
 <main class="main bg-[#E8EDF2] min-h-screen">
-  <div class="fixed bottom-20 right-17 z-50 flex items-center gap-3">
-    <a
-    [href]="whatsappLink"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="fixed bottom-20 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 shadow-lg transition-all duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-    aria-label="Contáctanos en WhatsApp" 
-    >
-    <i class="text-white text-[3rem] fa-brands fa-whatsapp animate-vibe inline-block"></i>
-  </a>
-  <span class="bg-green-600 text-white px-4 py-2 rounded-l-lg shadow-lg font-medium text-sm sm:block">
-    ¡Contáctanos!
-  </span>
-  </div>
-<div class="relative w-full bg-fixed bg-cover bg-center bg-no-repeat bg-attachment-fixed h-screen" style="background-image: url('./thumbnail.png');">
-  <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative z-10 py-32">
-        <div class="my-16">
-            <div class="justify-center items-center w-full flex mb-8">
-              <img  src="./LOGO.svg" alt="asd">
+  <section aria-labelledby="Inicio">
+    <div class="fixed bottom-20 right-17 z-50 flex items-center gap-3">
+        <a
+        [href]="whatsappLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-20 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 shadow-lg transition-all duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+        aria-label="Contáctanos en WhatsApp" 
+        >
+        <i class="text-white text-[3rem] fa-brands fa-whatsapp animate-vibe inline-block"></i>
+      </a>
+      <span class="bg-green-600 text-white px-4 py-2 rounded-l-lg shadow-lg font-medium text-sm sm:block">
+        ¡Contáctanos!
+      </span>
+      </div>
+    <div class="bg-attachment-fixed relative w-full bg-fixed bg-cover bg-center bg-no-repeat h-screen" style="background-image: url('./thumbnail.png');">
+      <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 py-32">
+            <div class="my-16">
+                <div class="justify-center items-center w-full flex mb-8">
+                  <img  src="./LOGO.svg" alt="asd">
+                </div>
+                <h1 class="text-center text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-8">
+                    Posiciona tu negocio en Google y aumenta tu visibilidad online
+                </h1>
             </div>
-            <h1 class="text-center text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-8">
-                Posiciona tu negocio en Google y aumenta tu visibilidad online
-            </h1>
         </div>
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-20 fill-[#1A3263] z-20 pointer-events-none">
+            <path d="M0,50 C480,110 960,-50 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
     </div>
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-20 fill-[#1A3263] z-20 pointer-events-none">
-        <path d="M0,50 C480,110 960,-50 1440,50 L1440,100 L0,100 Z"></path>
-    </svg>
-</div>
+  </section>
+  
   <app-start></app-start>
   <app-prices></app-prices>
   <app-services></app-services>
   <app-benefits></app-benefits>
   <app-road-map></app-road-map>
+  <app-our-clients></app-our-clients>
   <app-footer></app-footer>
 
 

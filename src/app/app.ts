@@ -6,12 +6,13 @@ import { Services } from './services/services';
 import { Prices } from './prices/prices'
 import { Footer } from './footer/footer'
 import { RoadMap } from './road-map/road-map';
+import { OurClients } from './our-clients/our-clients';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices, Footer, RoadMap],
+  imports: [RouterOutlet, Start, FontAwesomeModule, Benefits, Services, Prices, Footer, RoadMap, OurClients],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

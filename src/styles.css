@@ -30,3 +30,9 @@
 h1, p {
   font-family: 'Roboto', sans-serif;
 }
+
+@supports(-webkit-touch-callout: none) {
+  .bg-attachment-fixed {
+    background-attachment: unset;
+  }
+}

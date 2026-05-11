@@ -17,8 +17,3 @@
   animation: shaking-vibe 3s infinite linear !important;
 }
 
-@supports(-webkit-touch-callout: none) {
-  .bg-attachment-fixed {
-    background-attachment: unset;
-  }
-}
