@@ -1,29 +1,117 @@
-<section aria-labelledby="Precios">
-    <div class="relative w-full bg-fixed bg-cover bg-center bg-no-repeat bg-attachment-fixed" style="background-image: url('./pricesbg.jpg');">
-    <div class="absolute inset-0 bg-black/60"></div>
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="absolute top-0 left-0 w-full h-20 fill-[#1A3263] z-20 pointer-events-none">
-        <path d="M0,50 C480,-50 960,150 1440,50 L1440,0 L0,0 Z"></path>
+<section aria-labelledby="titulo-precios">
+  <div
+    class="relative w-full bg-fixed bg-cover bg-center bg-no-repeat bg-attachment-fixed"
+    style="background-image: url('./pricesbg.jpg');"
+  >
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/65"></div>
+    <svg
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      class="absolute top-0 left-0 z-20 h-20 w-full fill-[#1A3263] pointer-events-none"
+      aria-hidden="true"
+    >
+      <path d="M0,50 C480,-50 960,150 1440,50 L1440,0 L0,0 Z"></path>
     </svg>
-        <div class="relative z-10 py-32">
-            <div class="my-16">
-                <h2 class="text-center font-bold text-white text-4xl sm:text-4xl md:text-6xl lg:text-8xl mb-8">
-                    Nuestros precios
-                </h2>
-                <div class="flex justify-center items-center text-center">
-                        <div fade-in-view class="h-full w-60 sm:w-60 md:w-60 lg:w-90 p-6 m-2 bg-gradient-to-br from-blue-900 to-cyan-700 shadow-[0px_0px_12px_12px_rgba(0,_0,_0,_0.5)] border-1 border-[#3852B4] rounded-lg">
-                            <p class="font-bold text-[#E8EDF2] text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[3rem] mb-2">Precio único</p>
-                            <p class="text-[#E8EDF2]">OPORTUNIDAD DE LANZAMIENTO</p>
-                            <p class="text-[#E8EDF2] text-[1.2rem] sm:text-[1.2rem] md:text-[1.5rem] lg:text-[1.7rem]"><s>$120.000</s></p>
-                            <p class="font-bold text-[#E8EDF2] text-[1.5rem] sm:text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem] mb-2">$90.000</p>
-                            <br>
-                            <p class="text-[#E8EDF2]">Ideal para mejorar tu PYME.</p>
-                            <p class="text-[#E8EDF2]">Paga una sola vez y obtén todos los servicios que listamos abajo.</p>
-                        </div>
-                    </div>
+    <div class="relative z-10 py-24 sm:py-32">
+      <div class="mx-auto my-12 max-w-4xl px-4">
+        <h2
+          id="titulo-precios"
+          class="mb-4 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
+        >
+          Nuestros precios
+        </h2>
+        <p class="mx-auto mb-12 max-w-xl text-center text-sm text-white/85 sm:text-base">
+          Un paquete claro para lanzar o potenciar tu presencia digital.
+        </p>
+        <div class="flex justify-center">
+          <article
+            fade-in-view
+            class="pricing-card relative w-full max-w-md overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0c1f3d]/95 via-[#152d52]/95 to-[#0a3d4d]/95 shadow-[0_24px_64px_-12px_rgba(0,0,0,0.55),0_0_0_1px_rgba(255,255,255,0.06)_inset] backdrop-blur-md transition duration-300 ease-out hover:-translate-y-1 hover:border-cyan-400/25 hover:shadow-[0_28px_72px_-8px_rgba(0,180,200,0.15),0_24px_64px_-12px_rgba(0,0,0,0.5)] sm:px-10 sm:py-12"
+          >
+            <div
+              class="pointer-events-none absolute -right-16 -top-16 z-0 h-40 w-40 rounded-full bg-cyan-400/15 blur-3xl"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="pointer-events-none absolute -bottom-12 -left-12 z-0 h-36 w-36 rounded-full bg-[#3852B4]/25 blur-3xl"
+              aria-hidden="true"
+            ></div>
+
+            <div class="relative z-[1] px-8 py-10 text-center sm:px-10 sm:py-12">
+            <span
+              class="relative mb-6 inline-flex items-center justify-center rounded-full border border-amber-400/35 bg-amber-500/10 px-4 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-amber-100 shadow-sm sm:text-xs"
+            >
+              Oportunidad de lanzamiento
+            </span>
+
+            <p
+              class="relative mb-1 text-sm font-medium uppercase tracking-[0.35em] text-cyan-200/90 sm:text-base"
+            >
+              Precio único
+            </p>
+            <p class="relative mb-8 text-lg font-semibold text-[#E8EDF2] sm:text-xl">
+              Todo incluido, un solo pago
+            </p>
+
+            <div class="relative mb-8 flex flex-col items-center gap-1">
+              <p class="text-base text-[#E8EDF2]/55 line-through decoration-[#E8EDF2]/40 sm:text-lg">
+                $120.000 <span class="text-sm font-normal text-[#E8EDF2]/45">CLP</span>
+              </p>
+              <div class="flex items-baseline justify-center gap-1.5">
+                <span
+                  class="text-5xl font-extrabold tracking-tight text-white drop-shadow-sm sm:text-6xl md:text-7xl"
+                  >$90.000</span
+                >
+                <span class="self-end pb-2 text-sm font-medium text-cyan-100/80 sm:text-base">CLP</span>
+              </div>
+              <p class="mt-2 max-w-[16rem] text-xs text-[#E8EDF2]/65 sm:text-sm">
+                Ahorra en el paquete de lanzamiento — precio vigente por tiempo limitado.
+              </p>
             </div>
+
+            <div
+              class="relative mx-auto mb-8 h-px max-w-[12rem] bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"
+              aria-hidden="true"
+            ></div>
+
+            <ul class="relative mx-auto max-w-[17rem] space-y-3 text-left text-sm text-[#E8EDF2]/95 sm:text-base">
+              <li class="flex gap-3">
+                <span
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-500/20 text-xs font-bold text-cyan-200 ring-1 ring-cyan-400/30"
+                  aria-hidden="true"
+                  >✓</span
+                >
+                <span>Ideal para <strong class="font-semibold text-white">PYMEs</strong> que quieren crecer online.</span>
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-500/20 text-xs font-bold text-cyan-200 ring-1 ring-cyan-400/30"
+                  aria-hidden="true"
+                  >✓</span
+                >
+                <span>Un solo pago por el conjunto de servicios que ves en la página.</span>
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-500/20 text-xs font-bold text-cyan-200 ring-1 ring-cyan-400/30"
+                  aria-hidden="true"
+                  >✓</span
+                >
+                <span>Sin letras chicas: te explicamos qué incluye antes de cerrar.</span>
+              </li>
+            </ul>
+            </div>
+          </article>
         </div>
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-20 fill-[#1A3263] z-20 pointer-events-none">
-            <path d="M0,50 C480,110 960,-50 1440,50 L1440,100 L0,100 Z"></path>
-        </svg>
+      </div>
     </div>
+    <svg
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      class="absolute bottom-0 left-0 z-20 h-20 w-full fill-[#1A3263] pointer-events-none"
+      aria-hidden="true"
+    >
+      <path d="M0,50 C480,110 960,-50 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+  </div>
 </section>

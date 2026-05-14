@@ -1,10 +1,43 @@
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(50px);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+:host {
+  display: block;
+}
+
+@keyframes pricing-shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
   }
-  50% {
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+.pricing-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) skewX(-12deg);
+  animation: pricing-shine 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card::after {
+    animation: none;
+  }
+
+  .pricing-card {
+    transition: none;
+  }
+
+  .pricing-card:hover {
     transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }

@@ -1,39 +1,61 @@
-// fade-in-view.directive.ts (nombre recomendado)
-import { Directive, ElementRef, Renderer2, AfterViewInit, OnDestroy } from '@angular/core';
+import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  OnDestroy,
+  PLATFORM_ID,
+  Renderer2,
+  inject,
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[fade-in-view]',
-  standalone: true
+  standalone: true,
 })
 export class FadeInViewDirective implements AfterViewInit, OnDestroy {
-  private observer!: IntersectionObserver;
+  private readonly el = inject(ElementRef<HTMLElement>);
+  private readonly renderer = inject(Renderer2);
+  private readonly platformId = inject(PLATFORM_ID);
+  private observer?: IntersectionObserver;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  ngAfterViewInit(): void {
+    const native = this.el.nativeElement;
 
-  ngAfterViewInit() {
-    this.renderer.setStyle(this.el.nativeElement, 'opacity', '0');
-    this.renderer.setStyle(this.el.nativeElement, 'transform', 'translateY(30px)');
-    this.renderer.setStyle(this.el.nativeElement, 'transition', 'opacity 0.6s ease-out, transform 0.6s ease-out');
+    const canObserve =
+      isPlatformBrowser(this.platformId) && typeof IntersectionObserver !== 'undefined';
+
+    if (!canObserve) {
+      this.renderer.setStyle(native, 'opacity', '1');
+      this.renderer.setStyle(native, 'transform', 'translateY(0)');
+      return;
+    }
+
+    this.renderer.setStyle(native, 'opacity', '0');
+    this.renderer.setStyle(native, 'transform', 'translateY(30px)');
+    this.renderer.setStyle(
+      native,
+      'transition',
+      'opacity 0.6s ease-out, transform 0.6s ease-out',
+    );
 
     this.observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            this.renderer.setStyle(this.el.nativeElement, 'opacity', '1');
-            this.renderer.setStyle(this.el.nativeElement, 'transform', 'translateY(0)');
-            this.observer.unobserve(entry.target);
+            this.renderer.setStyle(native, 'opacity', '1');
+            this.renderer.setStyle(native, 'transform', 'translateY(0)');
+            this.observer?.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
-    this.observer.observe(this.el.nativeElement);
+    this.observer.observe(native);
   }
 
-  ngOnDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
   }
 }
